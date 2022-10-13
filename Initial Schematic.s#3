@@ -1217,9 +1217,6 @@ Source: http://www.analog.com/static/imported-files/data_sheets/AD820.pdf</descr
 <sheets>
 <sheet>
 <plain>
-<text x="93.98" y="60.96" size="1.778" layer="91">RS set to GND for high speed</text>
-<text x="81.28" y="30.48" size="1.778" layer="91">Shutdown defaulted to internal GND</text>
-<text x="2.54" y="66.04" size="1.778" layer="91">Check CAN TX and RX pins on ESP32 (allocated pins in the code)</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="15.24" y="27.94" smashed="yes" rot="R90">
@@ -1312,11 +1309,6 @@ Source: http://www.analog.com/static/imported-files/data_sheets/AD820.pdf</descr
 <wire x1="129.54" y1="10.16" x2="124.46" y2="10.16" width="0.1524" layer="91"/>
 <label x="119.38" y="10.16" size="1.778" layer="95"/>
 </segment>
-<segment>
-<pinref part="U1" gate="A" pin="RS"/>
-<wire x1="93.98" y1="50.8" x2="99.06" y2="50.8" width="0.1524" layer="91"/>
-<label x="99.06" y="50.8" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="CANH" class="0">
 <segment>
@@ -1397,6 +1389,24 @@ Source: http://www.analog.com/static/imported-files/data_sheets/AD820.pdf</descr
 <junction x="86.36" y="-7.62"/>
 </segment>
 </net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="U1" gate="A" pin="CANRX"/>
+<wire x1="63.5" y1="40.64" x2="50.8" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="40.64" x2="50.8" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="TX"/>
+<wire x1="50.8" y1="43.18" x2="33.02" y2="43.18" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="U1" gate="A" pin="CANTX"/>
+<wire x1="63.5" y1="45.72" x2="38.1" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="45.72" x2="38.1" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="RX"/>
+<wire x1="38.1" y1="40.64" x2="33.02" y2="40.64" width="0.1524" layer="91"/>
+</segment>
+</net>
 <net name="WHEEL_SPEED" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="P34"/>
@@ -1454,24 +1464,6 @@ Source: http://www.analog.com/static/imported-files/data_sheets/AD820.pdf</descr
 <pinref part="U$1" gate="G$1" pin="P32"/>
 <wire x1="-2.54" y1="35.56" x2="-7.62" y2="35.56" width="0.1524" layer="91"/>
 <label x="-20.32" y="35.56" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="U1" gate="A" pin="CANTX"/>
-<wire x1="63.5" y1="45.72" x2="43.18" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="45.72" x2="43.18" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="P5"/>
-<wire x1="43.18" y1="27.94" x2="33.02" y2="27.94" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="U1" gate="A" pin="CANRX"/>
-<wire x1="63.5" y1="40.64" x2="48.26" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="40.64" x2="48.26" y2="20.32" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="P4"/>
-<wire x1="48.26" y1="20.32" x2="33.02" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
