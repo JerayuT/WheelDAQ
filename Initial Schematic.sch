@@ -533,27 +533,6 @@
 <text x="-1.7272" y="-0.635" size="1.27" layer="21" ratio="6" rot="SR0">&gt;Value</text>
 <text x="-3.2766" y="-0.635" size="1.27" layer="27" ratio="6" rot="SR0">&gt;Name</text>
 </package>
-<package name="SIP625W50P254L1173H771Q4">
-<wire x1="-2.06" y1="5.125" x2="9.68" y2="5.125" width="0.127" layer="51"/>
-<wire x1="9.68" y1="5.125" x2="9.68" y2="-1.135" width="0.127" layer="51"/>
-<wire x1="9.68" y1="-1.135" x2="-2.06" y2="-1.135" width="0.127" layer="51"/>
-<wire x1="-2.06" y1="-1.135" x2="-2.06" y2="5.125" width="0.127" layer="51"/>
-<wire x1="-2.06" y1="5.125" x2="9.68" y2="5.125" width="0.127" layer="21"/>
-<wire x1="-2.06" y1="-1.135" x2="-2.06" y2="5.125" width="0.127" layer="21"/>
-<wire x1="9.68" y1="-1.135" x2="-2.06" y2="-1.135" width="0.127" layer="21"/>
-<wire x1="9.68" y1="5.125" x2="9.68" y2="-1.135" width="0.127" layer="21"/>
-<wire x1="-2.31" y1="5.375" x2="9.93" y2="5.375" width="0.05" layer="39"/>
-<wire x1="9.93" y1="5.375" x2="9.93" y2="-1.385" width="0.05" layer="39"/>
-<wire x1="9.93" y1="-1.385" x2="-2.31" y2="-1.385" width="0.05" layer="39"/>
-<wire x1="-2.31" y1="-1.385" x2="-2.31" y2="5.375" width="0.05" layer="39"/>
-<circle x="-2.8" y="0" radius="0.1" width="0.3" layer="21"/>
-<text x="-2.540559375" y="6.351409375" size="1.778390625" layer="25">&gt;NAME</text>
-<text x="-2.540059375" y="-3.810090625" size="1.778040625" layer="27">&gt;VALUE</text>
-<pad name="1" x="0" y="0" drill="0.78" shape="square"/>
-<pad name="2" x="2.54" y="0" drill="0.78"/>
-<pad name="3" x="5.08" y="0" drill="0.78"/>
-<pad name="4" x="7.62" y="0" drill="0.78"/>
-</package>
 <package name="R1206" urn="urn:adsk.eagle:footprint:23047/1">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
 <wire x1="0.9525" y1="-0.8128" x2="-0.9652" y2="-0.8128" width="0.1524" layer="51"/>
@@ -805,18 +784,6 @@
 <text x="-4.7244" y="14.1986" size="2.0828" layer="95" ratio="6" rot="SR0">&gt;Name</text>
 <text x="-5.3594" y="11.6586" size="2.0828" layer="96" ratio="6" rot="SR0">&gt;Value</text>
 </symbol>
-<symbol name="CRE1S0305S3C">
-<wire x1="-10.16" y1="5.08" x2="10.16" y2="5.08" width="0.1524" layer="94"/>
-<wire x1="10.16" y1="5.08" x2="10.16" y2="-5.08" width="0.1524" layer="94"/>
-<wire x1="10.16" y1="-5.08" x2="-10.16" y2="-5.08" width="0.1524" layer="94"/>
-<wire x1="-10.16" y1="-5.08" x2="-10.16" y2="5.08" width="0.1524" layer="94"/>
-<text x="-10.1645" y="5.590490625" size="1.778790625" layer="95">&gt;NAME</text>
-<text x="-10.1723" y="-7.62921875" size="1.78015" layer="96">&gt;VALUE</text>
-<pin name="-VIN" x="-15.24" y="-2.54" length="middle" direction="in"/>
-<pin name="+VIN" x="-15.24" y="2.54" length="middle" direction="in"/>
-<pin name="-VOUT" x="15.24" y="-2.54" length="middle" direction="out" rot="R180"/>
-<pin name="+VOUT" x="15.24" y="2.54" length="middle" direction="out" rot="R180"/>
-</symbol>
 <symbol name="R-US">
 <wire x1="-2.54" y1="0" x2="-2.159" y2="1.016" width="0.2032" layer="94"/>
 <wire x1="-2.159" y1="1.016" x2="-1.524" y2="-1.016" width="0.2032" layer="94"/>
@@ -954,32 +921,6 @@
 <attribute name="DIGI-KEY_PART_NUMBER_1" value="MAX3051ESA+-ND" constant="no"/>
 <attribute name="MANUFACTURER_PART_NUMBER" value="MAX3051ESA+" constant="no"/>
 <attribute name="MFR_NAME" value="Maxim Integrated Products" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="3V3-&gt;5V_VREG" prefix="U">
-<description>1 w, 2.97 -3.63 v Vin, Single Output, 5 v@0.2 a Datacom/Industrial/Oem/Commercial Dc-Dc Converter In Standard Sip </description>
-<gates>
-<gate name="G$1" symbol="CRE1S0305S3C" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SIP625W50P254L1173H771Q4">
-<connects>
-<connect gate="G$1" pin="+VIN" pad="2"/>
-<connect gate="G$1" pin="+VOUT" pad="4"/>
-<connect gate="G$1" pin="-VIN" pad="1"/>
-<connect gate="G$1" pin="-VOUT" pad="3"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="DESCRIPTION" value=" Isolated Module DC DC Converter 1 Output 5V - - - 200mA 2.97V - 3.63V Input "/>
-<attribute name="DIGI-KEY_PART_NUMBER" value="811-3193-ND"/>
-<attribute name="MF" value="Murata Power Solutions Inc."/>
-<attribute name="MP" value="CRE1S0305S3C"/>
-<attribute name="PACKAGE" value="None"/>
-<attribute name="PURCHASE-URL" value="https://pricing.snapeda.com/search/part/CRE1S0305S3C/?ref=eda"/>
 </technology>
 </technologies>
 </device>
@@ -1204,22 +1145,29 @@ Source: http://www.analog.com/static/imported-files/data_sheets/AD820.pdf</descr
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
+<groups>
+<schematic_group name="BRAKE_TEMP_OPAMP"/>
+<schematic_group name="5V_TO_3V3_OPAMP"/>
+</groups>
 <parts>
 <part name="U$1" library="NFR23" deviceset="ESP32DEVKITV1" device=""/>
 <part name="J1" library="NFR23" deviceset="CONNECTOR" device=""/>
 <part name="U1" library="NFR23" deviceset="CAN_TRANS" device="CAN_TRANS"/>
-<part name="U2" library="NFR23" deviceset="3V3-&gt;5V_VREG" device=""/>
 <part name="IC1" library="analog-devices" library_urn="urn:adsk.eagle:library:102" deviceset="AD820" device="R" package3d_urn="urn:adsk.eagle:package:30987/2"/>
 <part name="R1" library="NFR23" deviceset="RESISTOR" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="2k"/>
 <part name="R2" library="NFR23" deviceset="RESISTOR" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1k"/>
 <part name="R3" library="NFR23" deviceset="RESISTOR" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="470"/>
+<part name="IC2" library="analog-devices" library_urn="urn:adsk.eagle:library:102" deviceset="AD820" device="R" package3d_urn="urn:adsk.eagle:package:30987/2"/>
+<part name="R4" library="NFR23" deviceset="RESISTOR" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="2k"/>
+<part name="R5" library="NFR23" deviceset="RESISTOR" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1k"/>
+<part name="R6" library="NFR23" deviceset="RESISTOR" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="470"/>
+<part name="R7" library="NFR23" deviceset="RESISTOR" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="15K"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="93.98" y="60.96" size="1.778" layer="91">RS set to GND for high speed</text>
 <text x="81.28" y="30.48" size="1.778" layer="91">Shutdown defaulted to internal GND</text>
-<text x="2.54" y="66.04" size="1.778" layer="91">Check CAN TX and RX pins on ESP32 (allocated pins in the code)</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="15.24" y="27.94" smashed="yes" rot="R90">
@@ -1232,25 +1180,41 @@ Source: http://www.analog.com/static/imported-files/data_sheets/AD820.pdf</descr
 <attribute name="NAME" x="74.0156" y="57.3786" size="2.0828" layer="95" ratio="6" rot="SR0"/>
 <attribute name="VALUE" x="73.3806" y="54.8386" size="2.0828" layer="96" ratio="6" rot="SR0"/>
 </instance>
-<instance part="U2" gate="G$1" x="76.2" y="15.24" smashed="yes">
-<attribute name="NAME" x="66.0355" y="20.830490625" size="1.778790625" layer="95"/>
-<attribute name="VALUE" x="66.0277" y="7.61078125" size="1.78015" layer="96"/>
+<instance part="IC1" gate="G$1" x="7.62" y="-38.1" smashed="yes" rot="MR0" grouprefs="BRAKE_TEMP_OPAMP">
+<attribute name="NAME" x="0" y="-35.56" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="0" y="-41.91" size="1.778" layer="96" rot="MR0"/>
 </instance>
-<instance part="IC1" gate="G$1" x="68.58" y="-20.32" smashed="yes" rot="MR0">
-<attribute name="NAME" x="60.96" y="-17.78" size="1.778" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="60.96" y="-24.13" size="1.778" layer="96" rot="MR0"/>
+<instance part="R1" gate="G$1" x="30.48" y="-30.48" smashed="yes" rot="R90" grouprefs="BRAKE_TEMP_OPAMP">
+<attribute name="NAME" x="28.9814" y="-34.29" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="33.782" y="-31.75" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="R1" gate="G$1" x="91.44" y="-12.7" smashed="yes" rot="R90">
-<attribute name="NAME" x="89.9414" y="-16.51" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="94.742" y="-13.97" size="1.778" layer="96" rot="R180"/>
+<instance part="R2" gate="G$1" x="17.78" y="-25.4" smashed="yes" grouprefs="BRAKE_TEMP_OPAMP">
+<attribute name="NAME" x="13.97" y="-23.9014" size="1.778" layer="95"/>
+<attribute name="VALUE" x="13.97" y="-28.702" size="1.778" layer="96"/>
 </instance>
-<instance part="R2" gate="G$1" x="78.74" y="-7.62" smashed="yes">
-<attribute name="NAME" x="74.93" y="-6.1214" size="1.778" layer="95"/>
-<attribute name="VALUE" x="74.93" y="-10.922" size="1.778" layer="96"/>
+<instance part="R3" gate="G$1" x="-12.7" y="-48.26" smashed="yes" rot="R90" grouprefs="BRAKE_TEMP_OPAMP">
+<attribute name="NAME" x="-14.1986" y="-52.07" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="-9.398" y="-52.07" size="1.778" layer="96"/>
 </instance>
-<instance part="R3" gate="G$1" x="48.26" y="-30.48" smashed="yes" rot="R90">
-<attribute name="NAME" x="46.7614" y="-34.29" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="51.562" y="-34.29" size="1.778" layer="96"/>
+<instance part="IC2" gate="G$1" x="71.12" y="-38.1" smashed="yes" rot="MR0" grouprefs="5V_TO_3V3_OPAMP">
+<attribute name="NAME" x="63.5" y="-35.56" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="63.5" y="-41.91" size="1.778" layer="96" rot="MR0"/>
+</instance>
+<instance part="R4" gate="G$1" x="93.98" y="-30.48" smashed="yes" rot="R90" grouprefs="5V_TO_3V3_OPAMP">
+<attribute name="NAME" x="92.4814" y="-34.29" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="97.282" y="-31.75" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="R5" gate="G$1" x="81.28" y="-25.4" smashed="yes" grouprefs="5V_TO_3V3_OPAMP">
+<attribute name="NAME" x="77.47" y="-23.9014" size="1.778" layer="95"/>
+<attribute name="VALUE" x="77.47" y="-28.702" size="1.778" layer="96"/>
+</instance>
+<instance part="R6" gate="G$1" x="50.8" y="-48.26" smashed="yes" rot="R90" grouprefs="5V_TO_3V3_OPAMP">
+<attribute name="NAME" x="49.3014" y="-52.07" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="54.102" y="-52.07" size="1.778" layer="96"/>
+</instance>
+<instance part="R7" gate="G$1" x="124.46" y="-20.32" smashed="yes" rot="R90">
+<attribute name="NAME" x="122.9614" y="-19.05" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="130.302" y="-19.05" size="1.778" layer="96" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -1261,16 +1225,6 @@ Source: http://www.analog.com/static/imported-files/data_sheets/AD820.pdf</descr
 <pinref part="U1" gate="A" pin="GND"/>
 <wire x1="63.5" y1="35.56" x2="58.42" y2="35.56" width="0.1524" layer="91"/>
 <label x="58.42" y="33.02" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="U2" gate="G$1" pin="-VOUT"/>
-<wire x1="91.44" y1="12.7" x2="99.06" y2="12.7" width="0.1524" layer="91"/>
-<label x="99.06" y="12.7" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="U2" gate="G$1" pin="-VIN"/>
-<wire x1="60.96" y1="12.7" x2="55.88" y2="12.7" width="0.1524" layer="91"/>
-<label x="55.88" y="10.16" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="GND"/>
@@ -1284,18 +1238,18 @@ Source: http://www.analog.com/static/imported-files/data_sheets/AD820.pdf</descr
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="91.44" y1="-17.78" x2="91.44" y2="-20.32" width="0.1524" layer="91"/>
-<label x="91.44" y="-20.32" size="1.778" layer="95"/>
+<wire x1="30.48" y1="-35.56" x2="30.48" y2="-38.1" width="0.1524" layer="91" grouprefs="BRAKE_TEMP_OPAMP"/>
+<label x="30.48" y="-38.1" size="1.778" layer="95" grouprefs="BRAKE_TEMP_OPAMP"/>
 </segment>
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="48.26" y1="-35.56" x2="48.26" y2="-38.1" width="0.1524" layer="91"/>
-<label x="50.8" y="-38.1" size="1.778" layer="95"/>
+<wire x1="-12.7" y1="-53.34" x2="-12.7" y2="-55.88" width="0.1524" layer="91" grouprefs="BRAKE_TEMP_OPAMP"/>
+<label x="-10.16" y="-55.88" size="1.778" layer="95" grouprefs="BRAKE_TEMP_OPAMP"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="-VS"/>
-<wire x1="66.04" y1="-25.4" x2="66.04" y2="-30.48" width="0.1524" layer="91"/>
-<label x="68.58" y="-30.48" size="1.778" layer="95"/>
+<wire x1="5.08" y1="-43.18" x2="5.08" y2="-48.26" width="0.1524" layer="91" grouprefs="BRAKE_TEMP_OPAMP"/>
+<label x="7.62" y="-48.26" size="1.778" layer="95" grouprefs="BRAKE_TEMP_OPAMP"/>
 </segment>
 <segment>
 <pinref part="J1" gate="A" pin="25"/>
@@ -1316,6 +1270,21 @@ Source: http://www.analog.com/static/imported-files/data_sheets/AD820.pdf</descr
 <pinref part="U1" gate="A" pin="RS"/>
 <wire x1="93.98" y1="50.8" x2="99.06" y2="50.8" width="0.1524" layer="91"/>
 <label x="99.06" y="50.8" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="93.98" y1="-35.56" x2="93.98" y2="-38.1" width="0.1524" layer="91" grouprefs="5V_TO_3V3_OPAMP"/>
+<label x="93.98" y="-38.1" size="1.778" layer="95" grouprefs="5V_TO_3V3_OPAMP"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<wire x1="50.8" y1="-53.34" x2="50.8" y2="-55.88" width="0.1524" layer="91" grouprefs="5V_TO_3V3_OPAMP"/>
+<label x="53.34" y="-55.88" size="1.778" layer="95" grouprefs="5V_TO_3V3_OPAMP"/>
+<pinref part="R6" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<wire x1="68.58" y1="-43.18" x2="68.58" y2="-48.26" width="0.1524" layer="91" grouprefs="5V_TO_3V3_OPAMP"/>
+<label x="71.12" y="-48.26" size="1.778" layer="95" grouprefs="5V_TO_3V3_OPAMP"/>
+<pinref part="IC2" gate="G$1" pin="-VS"/>
 </segment>
 </net>
 <net name="CANH" class="0">
@@ -1338,42 +1307,37 @@ Source: http://www.analog.com/static/imported-files/data_sheets/AD820.pdf</descr
 </net>
 <net name="5V" class="0">
 <segment>
-<pinref part="U2" gate="G$1" pin="+VOUT"/>
-<wire x1="91.44" y1="17.78" x2="99.06" y2="17.78" width="0.1524" layer="91"/>
-<label x="99.06" y="20.32" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="G$1" pin="+VS"/>
-<wire x1="66.04" y1="-15.24" x2="66.04" y2="-10.16" width="0.1524" layer="91"/>
-<label x="63.5" y="-10.16" size="1.778" layer="95"/>
+<wire x1="5.08" y1="-33.02" x2="5.08" y2="-27.94" width="0.1524" layer="91" grouprefs="BRAKE_TEMP_OPAMP"/>
+<label x="2.54" y="-27.94" size="1.778" layer="95" grouprefs="BRAKE_TEMP_OPAMP"/>
 </segment>
 <segment>
 <pinref part="J1" gate="A" pin="20"/>
 <wire x1="129.54" y1="2.54" x2="124.46" y2="2.54" width="0.1524" layer="91"/>
 <label x="121.92" y="2.54" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="3V3" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="3V3"/>
-<wire x1="-2.54" y1="50.8" x2="-7.62" y2="50.8" width="0.1524" layer="91"/>
-<label x="-7.62" y="53.34" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="U1" gate="A" pin="VCC"/>
-<wire x1="63.5" y1="50.8" x2="58.42" y2="50.8" width="0.1524" layer="91"/>
-<label x="58.42" y="53.34" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="J1" gate="A" pin="1"/>
-<wire x1="121.92" y1="50.8" x2="129.54" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="50.8" x2="121.92" y2="50.8" width="0.1524" layer="91"/>
 <label x="121.92" y="50.8" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U2" gate="G$1" pin="+VIN"/>
-<wire x1="55.88" y1="17.78" x2="60.96" y2="17.78" width="0.1524" layer="91"/>
-<label x="55.88" y="17.78" size="1.778" layer="95"/>
+<pinref part="U$1" gate="G$1" pin="3V3"/>
+<wire x1="-2.54" y1="50.8" x2="-7.62" y2="50.8" width="0.1524" layer="91"/>
+<label x="-7.62" y="50.8" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="68.58" y1="-33.02" x2="68.58" y2="-27.94" width="0.1524" layer="91" grouprefs="5V_TO_3V3_OPAMP"/>
+<label x="66.04" y="-27.94" size="1.778" layer="95" grouprefs="5V_TO_3V3_OPAMP"/>
+<pinref part="IC2" gate="G$1" pin="+VS"/>
+</segment>
+<segment>
+<wire x1="76.2" y1="-25.4" x2="76.2" y2="-20.32" width="0.1524" layer="91" grouprefs="5V_TO_3V3_OPAMP"/>
+<label x="76.2" y="-17.78" size="1.778" layer="95" grouprefs="5V_TO_3V3_OPAMP"/>
+<pinref part="R5" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="3V3" class="0">
 <segment>
 <pinref part="J1" gate="A" pin="24"/>
 <wire x1="129.54" y1="-7.62" x2="124.46" y2="-7.62" width="0.1524" layer="91"/>
@@ -1384,17 +1348,43 @@ Source: http://www.analog.com/static/imported-files/data_sheets/AD820.pdf</descr
 <wire x1="129.54" y1="12.7" x2="124.46" y2="12.7" width="0.1524" layer="91"/>
 <label x="119.38" y="12.7" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="63.5" y1="-38.1" x2="60.96" y2="-38.1" width="0.1524" layer="91" grouprefs="5V_TO_3V3_OPAMP"/>
+<wire x1="60.96" y1="-38.1" x2="50.8" y2="-38.1" width="0.1524" layer="91" grouprefs="5V_TO_3V3_OPAMP"/>
+<wire x1="50.8" y1="-38.1" x2="50.8" y2="-43.18" width="0.1524" layer="91" grouprefs="5V_TO_3V3_OPAMP"/>
+<wire x1="60.96" y1="-38.1" x2="60.96" y2="-53.34" width="0.1524" layer="91" grouprefs="5V_TO_3V3_OPAMP"/>
+<junction x="60.96" y="-38.1" grouprefs="5V_TO_3V3_OPAMP"/>
+<wire x1="60.96" y1="-53.34" x2="81.28" y2="-53.34" width="0.1524" layer="91" grouprefs="5V_TO_3V3_OPAMP"/>
+<wire x1="81.28" y1="-53.34" x2="81.28" y2="-40.64" width="0.1524" layer="91" grouprefs="5V_TO_3V3_OPAMP"/>
+<wire x1="81.28" y1="-40.64" x2="76.2" y2="-40.64" width="0.1524" layer="91" grouprefs="5V_TO_3V3_OPAMP"/>
+<wire x1="50.8" y1="-38.1" x2="50.8" y2="-33.02" width="0.1524" layer="91" grouprefs="5V_TO_3V3_OPAMP"/>
+<junction x="50.8" y="-38.1" grouprefs="5V_TO_3V3_OPAMP"/>
+<label x="48.26" y="-30.48" size="1.778" layer="95" grouprefs="5V_TO_3V3_OPAMP"/>
+<pinref part="IC2" gate="G$1" pin="IN-"/>
+<pinref part="IC2" gate="G$1" pin="OUT"/>
+<pinref part="R6" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<pinref part="U1" gate="A" pin="VCC"/>
+<wire x1="63.5" y1="50.8" x2="58.42" y2="50.8" width="0.1524" layer="91"/>
+<label x="58.42" y="50.8" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R7" gate="G$1" pin="1"/>
+<wire x1="124.46" y1="-25.4" x2="124.46" y2="-27.94" width="0.1524" layer="91"/>
+<label x="127" y="-27.94" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="N$2" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
 <pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="83.82" y1="-7.62" x2="86.36" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="-25.4" x2="25.4" y2="-25.4" width="0.1524" layer="91" grouprefs="BRAKE_TEMP_OPAMP"/>
 <pinref part="IC1" gate="G$1" pin="IN+"/>
-<wire x1="86.36" y1="-7.62" x2="91.44" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="-7.62" x2="86.36" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="-17.78" x2="73.66" y2="-17.78" width="0.1524" layer="91"/>
-<junction x="86.36" y="-7.62"/>
+<wire x1="25.4" y1="-25.4" x2="30.48" y2="-25.4" width="0.1524" layer="91" grouprefs="BRAKE_TEMP_OPAMP"/>
+<wire x1="25.4" y1="-25.4" x2="25.4" y2="-35.56" width="0.1524" layer="91" grouprefs="BRAKE_TEMP_OPAMP"/>
+<wire x1="25.4" y1="-35.56" x2="12.7" y2="-35.56" width="0.1524" layer="91" grouprefs="BRAKE_TEMP_OPAMP"/>
+<junction x="25.4" y="-25.4" grouprefs="BRAKE_TEMP_OPAMP"/>
 </segment>
 </net>
 <net name="WHEEL_SPEED" class="0">
@@ -1406,7 +1396,11 @@ Source: http://www.analog.com/static/imported-files/data_sheets/AD820.pdf</descr
 <segment>
 <pinref part="J1" gate="A" pin="26"/>
 <wire x1="129.54" y1="-12.7" x2="124.46" y2="-12.7" width="0.1524" layer="91"/>
-<label x="106.68" y="-12.7" size="1.778" layer="95"/>
+<label x="104.14" y="-12.7" size="1.778" layer="95"/>
+<wire x1="124.46" y1="-12.7" x2="121.92" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="-12.7" x2="124.46" y2="-15.24" width="0.1524" layer="91"/>
+<junction x="124.46" y="-12.7"/>
+<pinref part="R7" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="BRAKE_3V3" class="0">
@@ -1417,19 +1411,19 @@ Source: http://www.analog.com/static/imported-files/data_sheets/AD820.pdf</descr
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="OUT"/>
-<wire x1="60.96" y1="-20.32" x2="58.42" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="-20.32" x2="48.26" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="-20.32" x2="48.26" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="0" y1="-38.1" x2="-2.54" y2="-38.1" width="0.1524" layer="91" grouprefs="BRAKE_TEMP_OPAMP"/>
+<wire x1="-2.54" y1="-38.1" x2="-12.7" y2="-38.1" width="0.1524" layer="91" grouprefs="BRAKE_TEMP_OPAMP"/>
+<wire x1="-12.7" y1="-38.1" x2="-12.7" y2="-43.18" width="0.1524" layer="91" grouprefs="BRAKE_TEMP_OPAMP"/>
 <pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="58.42" y1="-20.32" x2="58.42" y2="-35.56" width="0.1524" layer="91"/>
-<junction x="58.42" y="-20.32"/>
-<wire x1="58.42" y1="-35.56" x2="78.74" y2="-35.56" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="-35.56" x2="78.74" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="-38.1" x2="-2.54" y2="-53.34" width="0.1524" layer="91" grouprefs="BRAKE_TEMP_OPAMP"/>
+<junction x="-2.54" y="-38.1" grouprefs="BRAKE_TEMP_OPAMP"/>
+<wire x1="-2.54" y1="-53.34" x2="17.78" y2="-53.34" width="0.1524" layer="91" grouprefs="BRAKE_TEMP_OPAMP"/>
+<wire x1="17.78" y1="-53.34" x2="17.78" y2="-40.64" width="0.1524" layer="91" grouprefs="BRAKE_TEMP_OPAMP"/>
 <pinref part="IC1" gate="G$1" pin="IN-"/>
-<wire x1="78.74" y1="-22.86" x2="73.66" y2="-22.86" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="-20.32" x2="48.26" y2="-15.24" width="0.1524" layer="91"/>
-<junction x="48.26" y="-20.32"/>
-<label x="40.64" y="-12.7" size="1.778" layer="95"/>
+<wire x1="17.78" y1="-40.64" x2="12.7" y2="-40.64" width="0.1524" layer="91" grouprefs="BRAKE_TEMP_OPAMP"/>
+<wire x1="-12.7" y1="-38.1" x2="-12.7" y2="-33.02" width="0.1524" layer="91" grouprefs="BRAKE_TEMP_OPAMP"/>
+<junction x="-12.7" y="-38.1" grouprefs="BRAKE_TEMP_OPAMP"/>
+<label x="-15.24" y="-30.48" size="1.778" layer="95" grouprefs="BRAKE_TEMP_OPAMP"/>
 </segment>
 </net>
 <net name="BRAKE_5V" class="0">
@@ -1440,8 +1434,8 @@ Source: http://www.analog.com/static/imported-files/data_sheets/AD820.pdf</descr
 </segment>
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="73.66" y1="-7.62" x2="73.66" y2="-2.54" width="0.1524" layer="91"/>
-<label x="73.66" y="0" size="1.778" layer="95"/>
+<wire x1="12.7" y1="-25.4" x2="12.7" y2="-20.32" width="0.1524" layer="91" grouprefs="BRAKE_TEMP_OPAMP"/>
+<label x="12.7" y="-17.78" size="1.778" layer="95" grouprefs="BRAKE_TEMP_OPAMP"/>
 </segment>
 </net>
 <net name="SUS_POT" class="0">
@@ -1474,6 +1468,18 @@ Source: http://www.analog.com/static/imported-files/data_sheets/AD820.pdf</descr
 <wire x1="48.26" y1="20.32" x2="33.02" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="N$4" class="0">
+<segment>
+<wire x1="86.36" y1="-25.4" x2="88.9" y2="-25.4" width="0.1524" layer="91" grouprefs="5V_TO_3V3_OPAMP"/>
+<wire x1="88.9" y1="-25.4" x2="93.98" y2="-25.4" width="0.1524" layer="91" grouprefs="5V_TO_3V3_OPAMP"/>
+<wire x1="88.9" y1="-25.4" x2="88.9" y2="-35.56" width="0.1524" layer="91" grouprefs="5V_TO_3V3_OPAMP"/>
+<wire x1="88.9" y1="-35.56" x2="76.2" y2="-35.56" width="0.1524" layer="91" grouprefs="5V_TO_3V3_OPAMP"/>
+<junction x="88.9" y="-25.4" grouprefs="5V_TO_3V3_OPAMP"/>
+<pinref part="IC2" gate="G$1" pin="IN+"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<pinref part="R5" gate="G$1" pin="2"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
@@ -1494,6 +1500,11 @@ will not be understood (or retained) with this version.
 Since Version 8.3, EAGLE supports the association of 3D packages
 with devices in libraries, schematics, and board files. Those 3D
 packages will not be understood (or retained) with this version.
+</note>
+<note version="9.5" severity="warning">
+Since Version 9.5, EAGLE supports persistent groups with
+schematics, and board files. Those persistent groups
+will not be understood (or retained) with this version.
 </note>
 <note version="8.4" severity="warning">
 Since Version 8.4, EAGLE supports properties for SPICE simulation. 
